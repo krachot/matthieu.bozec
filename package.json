@@ -1,0 +1,36 @@
+{
+  "name": "matthieu.bozec.org",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:11ty": "cross-env ELEVENTY_ENV=dev eleventy --serve --port=8080 --quiet",
+    "dev:css": "postcss src/assets/css/style.css -o _tmp/style.css --watch",
+    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
+    "build:css": "cross-env NODE_ENV=production postcss src/assets/css/style.css -o dist/assets/css/style.css"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "postcss-import": "^15.1.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^3.1.8",
+    "autoprefixer": "^10.4.16",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "html-minifier": "^4.0.0",
+    "luxon": "^3.4.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.5"
+  }
+}
