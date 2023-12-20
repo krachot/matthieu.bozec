@@ -1,0 +1,18 @@
+:root {
+    --color-dark: #020617;
+    --color-light: #fff;
+
+    --font-family--base: system-ui, sans-serif;
+    --font-family--display: 'Pally', var(--font-family--base);
+
+    --font-weight--bold: 700;
+    --font-weight--medium: 500;
+    --font-weight--normal: 400;
+
+    --size-0: clamp(1rem, 0.9565rem + 0.4174vw, 1.25rem);
+    --size-1: clamp(1.2rem, 1.0959rem + 0.5207vw, 1.4994rem);
+    --size-2: clamp(1.44rem, 1.2457rem + 0.9717vw, 1.9988rem);
+    --size-3: clamp(1.7281rem, 1.4025rem + 1.6283vw, 2.6644rem);
+    --size-4: clamp(2.0738rem, 1.5596rem + 2.5707vw, 3.5519rem);
+    --size-5: clamp(2.4881rem, 1.7066rem + 3.9076vw, 4.735rem);
+}

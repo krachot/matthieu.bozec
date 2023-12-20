@@ -11,6 +11,12 @@
     <link rel="me" href="https://piaille.fr/@krachot" />
   </head>
   <body>
-    {{content | safe}}
+    {% svgsprite %}
+    {% include '_header.njk' %}
+    <main>
+        {{content | safe}}
+    </main>
+    {% icon "mastodon" %}
+    {% icon "github" %}
   </body>
 </html>

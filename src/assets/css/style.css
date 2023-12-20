@@ -1,13 +1,5 @@
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
-.image-cover {
-    display: inline-block;
-
-    & img {
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    }
-}
+@import "_fonts.css";
+@import "_reset.css";
+@import "_variables.css";
+@import "_base.css";
+@import "_type.css";
