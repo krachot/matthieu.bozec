@@ -1,17 +1,23 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const svgSprite = require("eleventy-plugin-svg-sprite");
+const pluginRev = require("eleventy-plugin-rev");
+const eleventySass = require("eleventy-sass");
+
+const postcss = require("postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+
 
 const filters = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
-    // Asset Watch Targets
-    eleventyConfig.addWatchTarget("./_tmp/style.css");
+    eleventyConfig.addWatchTarget('./src/assets');
 
     // Pass-through files
-    eleventyConfig.addPassthroughCopy({"./_tmp/style.css": "/assets/css/style.css"});
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+    eleventyConfig.addPassthroughCopy("./src/assets/js");
 
     // Plugins
     eleventyConfig.addPlugin(pluginRss);
@@ -19,6 +25,11 @@ module.exports = function (eleventyConfig) {
         path: "./src/assets/svg",
         globalClasses: 'icon-svg',
         defaultClasses: 'icon-default',
+    });
+    eleventyConfig.addPlugin(pluginRev);
+    eleventyConfig.addPlugin(eleventySass, {
+        postcss: postcss([autoprefixer, cssnano]),
+        rev: true
     });
 
     // Filters

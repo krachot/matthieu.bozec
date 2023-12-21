@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Matthieu Bozec">
     <title>{{metadata.title}} - {{title}}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+    <link rel="preload" href="{{ '/assets/fonts/Pally-Medium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/style.scss' | revvedOutput }}">
     <link rel="webmention" href="https://webmention.io/matthieu.bozec.org/webmention">
     <link rel="pingback" href="https://webmention.io/matthieu.bozec.org/xmlrpc">
     <link rel="me" href="https://piaille.fr/@krachot" />
+    <script type="module" src="{{ '/assets/js/main.js' | url }}" defer></script>
   </head>
   <body>
     {% svgsprite %}
     {% include '_header.njk' %}
-    <main>
-        {{content | safe}}
+    <main class="container">
+        <div class="container__inner">
+            {{content | safe}}
+            {% icon "mastodon" %}
+            {% icon "github" %}
+        </div>
     </main>
-    {% icon "mastodon" %}
-    {% icon "github" %}
   </body>
 </html>
