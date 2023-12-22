@@ -1,5 +1,5 @@
 if ("serviceWorker" in navigator) {
-    if (process.env.ELEVENTY_ENV !== 'production') {
+    if (process && process.env && process.env.ELEVENTY_ENV === 'development') {
         console.info('Skipping service worker');
     } else {
         window.addEventListener('load', () => {
