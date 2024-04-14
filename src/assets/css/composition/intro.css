@@ -6,7 +6,11 @@
     gap: var(--space-xs) var(--space-s);
 
     & h1 {
-        line-height: var(--leading-fine);
+        line-height: var(--leading-flat);
+    }
+
+    & header * + * {
+        margin-block-start: var(--space-xs);
     }
 
     & > * {
@@ -34,7 +38,7 @@
     .tag::before {
         content: "";
         position: absolute;
-        inset: -4px;
+        inset: -2px;
         background-color: oklch(var(--lch-yellow));
         border-bottom: solid 2px oklch(var(--lch-gold));
         z-index: -1;
