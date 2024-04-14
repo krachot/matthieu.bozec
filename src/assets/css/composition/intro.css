@@ -1,0 +1,43 @@
+.intro {
+    margin-block: clamp(1.5rem, 0.4565rem + 5.2174vi, 4.5rem);
+    display: grid;
+    grid-template-columns: 1fr minmax(6rem, 23%);
+    align-items: center;
+    gap: var(--space-xs) var(--space-s);
+
+    & > * {
+        grid-column: span 2;
+        text-wrap: balance;
+    }
+
+    & > :where(header, figure) {
+        grid-column: span 1;
+    }
+
+    & > figure img {
+        align-self: flex-start;
+        border-radius: 100%;
+        border: .2rem solid oklch(var(--lch-gold));
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+    }
+
+    .tag {
+        position: relative;
+    }
+
+    .tag::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        background-color: oklch(var(--lch-yellow));
+        border-bottom: solid 2px oklch(var(--lch-gold));
+        z-index: -1;
+        transform: rotate(-3deg);
+    }
+
+    .icon-list {
+        margin-block-start: var(--space-s);
+    }
+}

@@ -1,12 +1,9 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const svgSprite = require("eleventy-plugin-svg-sprite");
-const pluginRev = require("eleventy-plugin-rev");
-const eleventySass = require("eleventy-sass");
 
-const postcss = require("postcss");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
-
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
+const cssnanoPlugin = require('cssnano');
 
 const filters = require('./config/filters/index.js');
 
@@ -26,11 +23,9 @@ module.exports = function (eleventyConfig) {
         globalClasses: 'icon-svg',
         defaultClasses: 'icon-default',
     });
-    eleventyConfig.addPlugin(pluginRev);
-    eleventyConfig.addPlugin(eleventySass, {
-        postcss: postcss([autoprefixer, cssnano]),
-        rev: true
-    });
+
+    eleventyConfig.addTemplateFormats('css');
+    eleventyConfig.addPlugin(require('./config/extensions/css.js'));
 
     // Filters
     Object.keys(filters).forEach((filterName) => {

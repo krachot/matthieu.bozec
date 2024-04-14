@@ -1,0 +1,4 @@
+.breakout {
+    width: var(--breakout--content, min(var(--page-max-size), calc(100% - (var(--space-xs) * 2))));
+    margin-inline: auto;
+}

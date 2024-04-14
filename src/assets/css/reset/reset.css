@@ -1,0 +1,78 @@
+/*
+  Mix Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  And Andy Bell
+  https://piccalil.li/blog/a-more-modern-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+body {
+    min-block-size: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-block-size: 10em;
+}
+
+h1, h2,
+h3, h4 {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}

@@ -1,0 +1,14 @@
+.icon-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-s);
+
+    & svg {
+        fill: inherit;
+        filter: invert(0);
+        width: var(--font-size-1);
+        height: var(--font-size-1);
+    }
+}

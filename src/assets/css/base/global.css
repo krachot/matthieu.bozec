@@ -1,0 +1,37 @@
+body {
+    border-block-start: var(--body-border-style, solid) var(--body-border-size, .5rem) var(--body-border-color);
+    font-family: var(--font-family-base);
+    font-size: var(--text-size-base);
+    line-height: var(--leading);
+    background: var(--body-background-color);
+    color: var(--body-color);
+}
+
+:where(h1, .title-1, h2, .title-2, h3, .title-3) {
+    font-family: var(--font-family-heading);
+    font-weight: bold;
+    line-height: var(--leading-fine);
+
+    & > a {
+        text-decoration: none;
+    }
+}
+
+:where(h1, .title-1) {
+    font-size: var(--font-size-5);
+}
+
+:where(h2, .title-2) {
+    font-size: var(--font-size-4);
+}
+
+:where(h3, .title-3) {
+    font-size: var(--font-size-3);
+}
+
+:where(a[class=""], a:not([class])) {
+    color: var(--link-color);
+    text-decoration-color: var(--link-color);
+    text-underline-offset: calc(28px / 6);
+    text-decoration-thickness: calc(28px / 12);
+}

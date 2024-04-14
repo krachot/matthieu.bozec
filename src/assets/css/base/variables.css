@@ -1,0 +1,20 @@
+:root {
+    --leading: 1.5;
+    --leading-short: 1.3;
+    --leading-fine: 1.1;
+    --leading-flat: 1;
+    --leading-loose: 1.7;
+
+    --font-family-base: var(--font-family-neo-grotesque);
+    --font-family-heading: var(--font-family-humanist);
+
+    --text-size-base: var(--font-size-0);
+
+    --page-max-size: 65ch;
+
+    --body-border-color: oklch(var(--lch-gold));
+    --body-background-color: oklch(var(--lch-white));
+    --body-color: oklch(var(--lch-black));
+    --link-color: oklch(var(--lch-blue));
+    --tag-color: oklch(var(--lch-yellow));
+}
