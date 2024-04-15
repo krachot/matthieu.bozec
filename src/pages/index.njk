@@ -13,7 +13,7 @@ tags: page
         </header>
 
         <figure>
-            {% image "./src/assets/images/tronche.jpg", "", "25vw, 300px" %}
+            {% image "./src/assets/images/tronche.jpg", "", "(max-width: 800px) 23vw, 185px" %}
         </figure>
 
         <p>
@@ -29,19 +29,19 @@ tags: page
 
         <ul class="icon-list" role="list" aria-label="Moi, ailleurs sur l'Internet">
             <li class="icon-list-item">
-                <a href="" aria-label="LinkedIn">{% icon "linkedin" %}</a>
+                <a href="{{metadata.social.linkedin}}" aria-label="LinkedIn">{% icon "linkedin" %}</a>
             </li>
             <li class="icon-list-item">
-                <a href="" aria-label="Github">{% icon "github" %}</a>
+                <a href="{{metadata.social.github}}" aria-label="Github">{% icon "github" %}</a>
             </li>
             <li class="icon-list-item">
-                <a href="" aria-label="Mastodon">{% icon "mastodon" %}</a>
+                <a href="{{metadata.social.mastodon}}" aria-label="Mastodon">{% icon "mastodon" %}</a>
             </li>
             <li class="icon-list-item">
-                <a href="" aria-label="Instagram">{% icon "instagram" %}</a>
+                <a href="{{metadata.social.instagram}}" aria-label="Instagram">{% icon "instagram" %}</a>
             </li>
             <li class="icon-list-item">
-                <a href="" aria-label="X">{% icon "x" %}</a>
+                <a href="{{metadata.social.x}}" aria-label="X">{% icon "x" %}</a>
             </li>
         </ul>
     </div>

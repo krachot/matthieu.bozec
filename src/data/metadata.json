@@ -7,5 +7,12 @@
     "name": "Matthieu Bozec",
     "email": "matthieu@4h04.com",
     "url": "https://matthieu.bozec.org/about"
+  },
+  "social": {
+    "linkedin": "https://fr.linkedin.com/in/matthieubozec",
+    "github": "https://github.com/krachot",
+    "mastodon": "https://piaille.fr/@krachot",
+    "instagram": "https://www.instagram.com/krachot/",
+    "x": "https://twitter.com/krachot"
   }
 }
