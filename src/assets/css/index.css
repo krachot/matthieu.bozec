@@ -12,6 +12,6 @@
 
 @import "composition/breakout.css" layer(composition);
 @import "composition/header.css" layer(composition);
-@import "composition/intro.css" layer(composition);
+@import "composition/vcard.css" layer(composition);
 
 @import "components/icon-list.css" layer(components);

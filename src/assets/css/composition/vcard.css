@@ -1,4 +1,4 @@
-.intro {
+.vcard {
     margin-block: clamp(1.5rem, 0.4565rem + 5.2174vi, 4.5rem);
     display: grid;
     grid-template-columns: 1fr minmax(6rem, 23%);
@@ -7,6 +7,10 @@
 
     & h1 {
         line-height: var(--leading-flat);
+    }
+
+    & a {
+        color: currentColor;
     }
 
     & header * + * {
