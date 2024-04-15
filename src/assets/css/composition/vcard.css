@@ -9,7 +9,7 @@
         line-height: var(--leading-flat);
     }
 
-    & a {
+    & h1 a {
         color: currentColor;
     }
 
