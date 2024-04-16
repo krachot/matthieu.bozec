@@ -1,0 +1,17 @@
+---
+permalink: '/bookmarks/'
+layout: 'base'
+title: 'Favoris'
+tags: page
+eleventyImport:
+  collections: ["pocket"]
+---
+
+<ul>
+{%- for bookmark in pocket -%}
+  <li>
+    <a href="{{ bookmark.url }}">{{bookmark.title}}</a>
+  </li>
+{%- endfor -%}
+</ul>
+
