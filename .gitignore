@@ -5,3 +5,5 @@
 .netlify
 .DS_Store
 *.code-workspace
+.env
+.cache

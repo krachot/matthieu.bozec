@@ -6,7 +6,16 @@
     <nav class="main-menu" aria-label="Menu">
         <ul role="list">
             <li>
-                <a href="/">Accueil</a>
+                <a href="/">
+                    {% icon "home" %}
+                    <span class="screen-reader-text">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/bookmarks/">
+                    {% icon "link" %}
+                    <span class="screen-reader-text">Bookmarks</span>
+                </a>
             </li>
         </ul>
     </nav>

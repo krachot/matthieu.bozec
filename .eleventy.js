@@ -1,9 +1,7 @@
+require('dotenv').config();
+
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const svgSprite = require("eleventy-plugin-svg-sprite");
-
-const postcss = require('postcss');
-const autoprefixer = require('autoprefixer');
-const cssnanoPlugin = require('cssnano');
 
 const filters = require('./config/filters/index.js');
 
@@ -31,6 +29,11 @@ module.exports = function (eleventyConfig) {
     // Filters
     Object.keys(filters).forEach((filterName) => {
         eleventyConfig.addFilter(filterName, filters[filterName])
+    })
+
+    eleventyConfig.addFilter("debugger", (...args) => {
+        console.log(...args)
+        debugger;
     })
 
     // Shortcodes
