@@ -13,6 +13,11 @@ for = "/.well-known/webfinger"
   Content-Type = "application/jrd+json; charset=utf-8"
 
 [[headers]]
+	for = "/sitemap.xml"
+	[headers.values]
+	Content-Type = "text/xml; charset=utf-8"
+
+[[headers]]
     for = "/*"
     [headers.values]
     Content-Security-Policy = "upgrade-insecure-requests; block-all-mixed-content;"
