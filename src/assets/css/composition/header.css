@@ -5,20 +5,44 @@
     flex-flow: row wrap;
     place-content: center flex-start;
     padding-block: var(--site-header-padding-block, var(--space-2xs));
+
+    & a:hover {
+        color: var(--site-header-link-hover-color, var(--link-color));
+    }    
 }
 
-.page-index .site-title {
-    display: none;
+.site-title {
+    font-size: var(--site-title-font-size, var(--font-size--1));
+    font-weight: 700;
+    font-family: var(--site-title-font-family, var(--font-family-heading));
+
+    & a {
+        text-decoration: none;
+        color: currentColor;
+    }
 }
 
 .main-menu {
     margin-inline-start: auto;
-    font-size: var(--main-menu-font-size, var(--font-size--1));
+    font-size: var(--main-menu-font-size, var(--font-size--2));
+    line-height: var(--size-header-line-height, var(--leading-flat));
 
     & ul {
         display: flex;
         flex-flow: row wrap;
         place-content: center flex-start;
         gap: var(--main-menu-gap, var(--space-s));
+    }
+
+    & a {
+        color: currentColor;
+        text-decoration: none;
+        font-weight: 700;
+        display: block;
+    }
+
+    & svg {
+        width: 24px;
+        height: 24px;
     }
 }

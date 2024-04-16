@@ -15,3 +15,5 @@
 @import "composition/vcard.css" layer(composition);
 
 @import "components/icon-list.css" layer(components);
+
+@import "utilities/a11y.css" layer(utilities);
