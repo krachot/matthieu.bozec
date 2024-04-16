@@ -1,0 +1,37 @@
+###
+# URLs
+###
+[build.processing.html]
+  pretty_urls = true
+
+###
+# HEADERS
+###
+[[headers]]
+for = "/.well-known/webfinger"
+  [headers.values]
+  Content-Type = "application/jrd+json; charset=utf-8"
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+    Content-Security-Policy = "upgrade-insecure-requests; block-all-mixed-content;"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin, no-referrer-when-downgrade"
+    Permissions-Policy = "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
+
+###
+# REDIRECTS
+###
+[[redirects]]
+  from = "https://mellifluous-flan-ceda8f.netlify.app"
+  to = "https://matthieu.bozec.org"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.bozec.org"
+  to = "https://matthieu.bozec.org"
+  status = 301
+  force = true
