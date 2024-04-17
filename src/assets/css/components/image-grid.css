@@ -1,0 +1,24 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "large large"
+                    "small1 small2";
+    grid-auto-rows: auto;
+
+    & *:nth-child(3n+1) {
+        grid-area: large;
+    }
+
+    img {
+        outline: 1px solid oklch(var(--lch-white));
+        outline-offset: calc(-1 * 1px);
+    }
+}
+
+@container breakout (min-width: 560px) {
+    .image-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "large small1"
+                        "large small2";
+    }
+}

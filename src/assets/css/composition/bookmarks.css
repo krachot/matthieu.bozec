@@ -1,8 +1,4 @@
 .bookmarks {
-    margin-block: var(--bookmarks-margin-block, var(--space-m));
-}
-
-.bookmarks__list {
     & > * + * {
         margin-block-start: var(--bookmarks-list-margin-block-start, var(--space-m));
     }

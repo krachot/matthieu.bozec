@@ -1,0 +1,54 @@
+
+:where(.text-5) {
+    font-size: var(--font-size-5);
+}
+
+:where(.text-4) {
+    font-size: var(--font-size-4);
+}
+
+:where(.text-3) {
+    font-size: var(--font-size-3);
+}
+
+:where(.text-2) {
+    font-size: var(--font-size-2);
+}
+
+:where(.text-1) {
+    font-size: var(--font-size-1);
+}
+
+:where(.text-0) {
+    font-size: var(--font-size-0);
+}
+
+:where(.text--1) {
+    font-size: var(--font-size--1);
+}
+
+:where(.text--2) {
+    font-size: var(--font-size--2);
+}
+
+:where(.lead) {
+    position: relative;
+    width: max-content;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        background-color: oklch(var(--lch-yellow));
+        border-bottom: solid 2px oklch(var(--lch-gold));
+        z-index: -1;
+        transform: rotate(-3deg);
+    }
+}
+
+.text-reset {
+    font: inherit;
+    line-height: inherit;
+    text-shadow: unset;
+    text-wrap: initial;
+}

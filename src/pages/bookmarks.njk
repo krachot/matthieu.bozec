@@ -1,30 +1,26 @@
 ---
 permalink: '/bookmarks/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}'
-layout: 'base'
-title: 'Favoris'
-tags: page
+layout: 'default'
+title: 'Favoris - Matthieu Bozec, Développeur Symfony et Wordpress'
 pagination:
   data: bookmarks
   size: 25
 ---
+<h1 class="lead">Favoris</h1>
+<p>Une collection de liens intéressants</p>
 
-<div class="breakout flow bookmarks">
-  <h1 class="title-3">Favoris</h1>
-  <p>Une collection de liens intéressants</p>
+<ul role="list" class="bookmarks">
+{%- for bookmark in pagination.items -%}
+<li class="bookmark-item">
+    <a href="{{ bookmark.url }}" lang="{{bookmark.language}}" hreflang="{{bookmark.language}}">{{bookmark.title}}</a>
+    <blockquote lang="{{bookmark.language}}">{{ bookmark.excerpt }}</blockquote>
+    <p class="bookmark-item__date">{{ bookmark.created_at | dateFromUnixTimespamp | dateToFormat("dd MMMM yyyy") }}</p>
+</li>
+{%- endfor -%}
+</ul>
 
-  <ul role="list" class="bookmarks__list">
-  {%- for bookmark in pagination.items -%}
-    <li class="bookmark-item">
-      <a href="{{ bookmark.url }}" lang="{{bookmark.language}}" hreflang="{{bookmark.language}}">{{bookmark.title}}</a>
-      <blockquote lang="{{bookmark.language}}">{{ bookmark.excerpt }}</blockquote> 
-      <p class="bookmark-item__date">{{ bookmark.created_at | dateFromUnixTimespamp | dateToFormat("dd MMMM yyyy") }}</p>
-    </li>
-  {%- endfor -%}
-  </ul>
-
-  <div class="pagination">
-      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="pagination__prev link">Favoris récents</a>{% else %}{% endif %}
-      {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="pagination__next link">Favoris précédents</a>{% else %}{% endif %}
-  </div>
+<div class="pagination">
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" class="pagination__prev link">Favoris récents</a>{% else %}{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}" class="pagination__next link">Favoris précédents</a>{% else %}{% endif %}
 </div>
 

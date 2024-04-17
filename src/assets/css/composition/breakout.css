@@ -3,8 +3,9 @@
     --gap: var(--space-m);
     --content: min(var(--page-max), 100% - var(--gap) * 2);
     --gutter: minmax(var(--gap), var(--gutter-max));
-    --popout: minmax(0px, 1rem);
+    --popout: minmax(0px, var(--space-m));
 
+    container: breakout / inline-size;
     display: grid;
     grid-template-columns:
       [full-start] minmax(0, 1fr)
@@ -20,6 +21,13 @@
     grid-column: content-start / content-end;
 }
 
+.popout {
+    grid-column: popout;
+}
+
+.full {
+    grid-column: full;
+}
 
 .center {
     margin-inline: auto;

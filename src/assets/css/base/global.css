@@ -13,6 +13,10 @@ body {
     color: var(--body-color);
 }
 
+.site-main {
+    margin-block: var(--site-main-space, var(--space-m));
+}
+
 :where(h1, .title-1, h2, .title-2, h3, .title-3) {
     font-family: var(--font-family-heading);
     font-weight: bold;
@@ -23,19 +27,19 @@ body {
     }
 }
 
-:where(h1, .title-1) {
-    font-size: var(--font-size-5);
-}
-
-:where(h2, .title-2) {
-    font-size: var(--font-size-4);
-}
-
-:where(h3, .title-3) {
+:is(h1) {
     font-size: var(--font-size-3);
 }
 
-:where(a[class=""], a:not([class]), a.link) {
+:is(h2) {
+    font-size: var(--font-size-2);
+}
+
+:is(h3) {
+    font-size: var(--font-size-1);
+}
+
+:is(a[class=""], a:not([class]), a.link) {
     color: var(--link-color);
     text-decoration-color: var(--link-color);
     text-underline-offset: calc(28px / 6);

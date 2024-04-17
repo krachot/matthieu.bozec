@@ -35,20 +35,6 @@
         aspect-ratio: 1 / 1;
     }
 
-    .tag {
-        position: relative;
-    }
-
-    .tag::before {
-        content: "";
-        position: absolute;
-        inset: -2px;
-        background-color: oklch(var(--lch-yellow));
-        border-bottom: solid 2px oklch(var(--lch-gold));
-        z-index: -1;
-        transform: rotate(-3deg);
-    }
-
     .icon-list {
         margin-block-start: var(--space-s);
     }

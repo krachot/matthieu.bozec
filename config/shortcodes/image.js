@@ -1,6 +1,13 @@
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt, sizes = '100 vw', loading = 'lazy', decoding = 'async') {
+async function imageShortcode(
+    src,
+    alt,
+    sizes = '100 vw',
+    className = '',
+    loading = 'lazy',
+    decoding = 'async'
+) {
     const metadata = await Image(src, {
         widths: [150, 300, 600, 900, 1200],
         formats: ["webp"],
@@ -12,6 +19,7 @@ async function imageShortcode(src, alt, sizes = '100 vw', loading = 'lazy', deco
         sizes,
         loading,
         decoding,
+        class: className
     };
 
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
