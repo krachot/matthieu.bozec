@@ -5,6 +5,14 @@
   pretty_urls = true
 
 ###
+# PLUGINS
+###
+[[plugins]]
+package = "netlify-plugin-cache"
+  [plugins.inputs]
+  paths = [".cache"]
+
+###
 # HEADERS
 ###
 [[headers]]

@@ -1,0 +1,27 @@
+.bookmarks {
+    margin-block: var(--bookmarks-margin-block, var(--space-m));
+}
+
+.bookmarks__list {
+    & > * + * {
+        margin-block-start: var(--bookmarks-list-margin-block-start, var(--space-m));
+    }
+}
+
+.bookmark-item {
+    & > * + * {
+        margin-block-start: var(--bookmark-item-margin-block-start, var(--space-3xs));
+    }
+
+    & blockquote {
+        font-size: var(--font-size--1);
+        padding-inline-start: var(--space-xs);
+        font-style: italic;
+        border-inline-start: solid 2px oklch(var(--bookmark-item-border-color, var(--lch-slate-300)));
+    }
+
+    .bookmark-item__date {
+        font-size: var(--font-size--2);
+        color: oklch(var(--bookmark-item-date-color, var(--lch-slate-700)));
+    }
+}

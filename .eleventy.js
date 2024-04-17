@@ -31,11 +31,6 @@ module.exports = function (eleventyConfig) {
         eleventyConfig.addFilter(filterName, filters[filterName])
     })
 
-    eleventyConfig.addFilter("debugger", (...args) => {
-        console.log(...args)
-        debugger;
-    })
-
     // Shortcodes
     eleventyConfig.addPlugin(require('./config/shortcodes/icon.js'));
     eleventyConfig.addPlugin(require('./config/shortcodes/image.js'));

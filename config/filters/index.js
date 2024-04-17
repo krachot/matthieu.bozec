@@ -1,4 +1,5 @@
-const { DateTime } = require("luxon");
+const { DateTime, Settings } = require("luxon");
+Settings.defaultLocale = "fr";
 
 module.exports = {
     dateToFormat: function (date, format) {
@@ -17,4 +18,13 @@ module.exports = {
     dateFromISO: function (timestamp) {
         return DateTime.fromISO(timestamp, { zone: 'utc' }).toJSDate()
     },
+
+    dateFromUnixTimespamp: function (timestamp) {
+        return DateTime.fromMillis(timestamp, { zone: 'utc' }).toJSDate()
+    },
+
+    debugger: function (...args) {
+        console.log(...args)
+        debugger;
+    }
 }

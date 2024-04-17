@@ -29,7 +29,7 @@ body {
     font-size: var(--font-size-3);
 }
 
-:where(a[class=""], a:not([class])) {
+:where(a[class=""], a:not([class]), a.link) {
     color: var(--link-color);
     text-decoration-color: var(--link-color);
     text-underline-offset: calc(28px / 6);
