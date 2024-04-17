@@ -29,21 +29,11 @@ description: 'Matthieu Bozec, développeur Web Full Stack avec plus de 20 ans d'
         </p>
 
         <ul class="icon-list" role="list" aria-label="Moi, ailleurs sur l'Internet">
+            {% for item in social %}
             <li class="icon-list-item">
-                <a href="{{metadata.social.linkedin}}" aria-label="LinkedIn">{% icon "linkedin" %}</a>
+                <a href="{{ item.url }}" aria-label="{{ item.name }}">{% icon item.icon %}</a>
             </li>
-            <li class="icon-list-item">
-                <a href="{{metadata.social.github}}" aria-label="Github">{% icon "github" %}</a>
-            </li>
-            <li class="icon-list-item">
-                <a href="{{metadata.social.mastodon}}" aria-label="Mastodon">{% icon "mastodon" %}</a>
-            </li>
-            <li class="icon-list-item">
-                <a href="{{metadata.social.instagram}}" aria-label="Instagram">{% icon "instagram" %}</a>
-            </li>
-            <li class="icon-list-item">
-                <a href="{{metadata.social.x}}" aria-label="X">{% icon "x" %}</a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </section>

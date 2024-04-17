@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Linkedin",
+    "url": "https://fr.linkedin.com/in/matthieubozec",
+    "icon": "linkedin"
+  },
+  {
+    "label": "Github",
+    "url": "https://github.com/krachot",
+    "icon": "github"
+  },
+  {
+    "label": "Mastodon",
+    "url": "https://piaille.fr/@krachot",
+    "icon": "mastodon"
+  },
+  {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/krachot/",
+    "icon": "instagram"
+  },
+  {
+    "label": "X",
+    "url": "https://twitter.com/krachot",
+    "icon": "x"
+  }
+]
