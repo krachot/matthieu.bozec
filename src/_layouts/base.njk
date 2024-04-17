@@ -6,10 +6,11 @@
     <meta name="author" content="Matthieu Bozec">
     <title>{{title}}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | absoluteUrl(metadata.url) }}" />
     <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="webmention" href="https://webmention.io/matthieu.bozec.org/webmention">
     <link rel="pingback" href="https://webmention.io/matthieu.bozec.org/xmlrpc">
     <link rel="me" href="https://piaille.fr/@krachot" />
