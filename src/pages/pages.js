@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const isDevEnv = process.env.ELEVENTY_ENV === 'development';
 
 function showDraft(data) {

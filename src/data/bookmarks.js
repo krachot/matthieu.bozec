@@ -4,7 +4,6 @@ const API_KEY = process.env.POCKET_CONSUMER_KEY;
 const API_URL = 'https://getpocket.com/v3/get';
 const API_ACCESS_TOKEN = process.env.POCKET_ACCESS_TOKEN;
 
-
 module.exports = async () => {
     try {
       const json = await EleventyFetch(`${API_URL}`, {
@@ -13,8 +12,8 @@ module.exports = async () => {
           fetchOptions: {
             method: "POST",
             body: JSON.stringify({
-              consumer_key: API_KEY, 
-              access_token: API_ACCESS_TOKEN, 
+              consumer_key: API_KEY,
+              access_token: API_ACCESS_TOKEN,
               favorite: 1,
               sort: 'newest'
             }),
@@ -36,7 +35,7 @@ module.exports = async () => {
       });
 
       return normalizedData.sort((a, b) => (a.created_at > b.created_at) ? -1 : 1)
-      
+
     } catch (ex) {
       return [];
     }
