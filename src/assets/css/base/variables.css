@@ -10,7 +10,8 @@
 
     --text-size-base: var(--font-size-0);
 
-    --page-max-size: 65ch;
+    --page-gutters: clamp(var(--space-m), 3vw, var(--space-xl));
+    --page-max: 65ch;
 
     --body-border-color: oklch(var(--lch-gold));
     --body-background-color: oklch(var(--lch-white));

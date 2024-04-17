@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
     border-block-start: var(--body-border-style, solid) var(--body-border-size, .5rem) var(--body-border-color);
     font-family: var(--font-family-base);

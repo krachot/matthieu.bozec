@@ -1,14 +1,16 @@
 .site-header {
-    --page-max-size: 80ch;
+    --max: 80ch;
 
     display: flex;
     flex-flow: row wrap;
     place-content: center flex-start;
     padding-block: var(--site-header-padding-block, var(--space-2xs));
+    margin-inline: auto;
+    inline-size: min(var(--max, var(--page-max)), calc(100% - calc(var(--space-m) * 2)));
 
     & a:hover {
         color: var(--site-header-link-hover-color, var(--link-color));
-    }    
+    }
 }
 
 .site-title {
