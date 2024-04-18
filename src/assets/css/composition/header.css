@@ -2,8 +2,9 @@
     --max: 80ch;
 
     display: flex;
-    flex-flow: row wrap;
-    place-content: center flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     padding-block: var(--site-header-padding-block, var(--space-2xs));
     margin-inline: auto;
     inline-size: min(var(--max, var(--page-max)), calc(100% - calc(var(--space-m) * 2)));
@@ -11,23 +12,36 @@
     & a:hover {
         color: var(--site-header-link-hover-color, var(--link-color));
     }
+
+    & > * {
+        padding-block: var(--space-3xs);
+    }
 }
 
 .site-title {
-    font-size: var(--site-title-font-size, var(--font-size--1));
-    font-weight: 700;
+    font-size: var(--site-title-font-size, var(--font-size-1));
+    font-weight: 900;
     font-family: var(--site-title-font-family, var(--font-family-heading));
 
     & a {
         text-decoration: none;
         color: currentColor;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    & svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
 .main-menu {
-    margin-inline-start: auto;
-    font-size: var(--main-menu-font-size, var(--font-size--2));
-    line-height: var(--size-header-line-height, var(--leading-flat));
+    font-size: var(--main-menu-font-size, var(--font-size--1));
+    font-weight: 400;
+    
 
     & ul {
         display: flex;
@@ -39,7 +53,6 @@
     & a {
         color: currentColor;
         text-decoration: none;
-        font-weight: 700;
         display: block;
     }
 

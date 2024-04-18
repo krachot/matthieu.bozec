@@ -15,7 +15,7 @@
     }
 }
 
-@container breakout (min-width: 560px) {
+@container breakout (min-width: 768px) {
     .image-grid {
         grid-template-columns: 2fr 1fr;
         grid-template-areas: "large small1"

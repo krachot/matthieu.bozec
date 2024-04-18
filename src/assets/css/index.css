@@ -13,8 +13,10 @@
 @import "composition/breakout.css" layer(composition);
 @import "composition/flow.css" layer(composition);
 @import "composition/header.css" layer(composition);
+@import "composition/layout.css" layer(composition);
 @import "composition/vcard.css" layer(composition);
 @import "composition/bookmarks.css" layer(composition);
+@import "composition/footer.css" layer(composition);
 
 @import "components/icon-list.css" layer(components);
 @import "components/image-grid.css" layer(components);

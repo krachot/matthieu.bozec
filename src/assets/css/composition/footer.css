@@ -1,0 +1,7 @@
+.site-footer {
+    padding-block: var(--site-footer-space, var(--space-m));
+    font-size: var(--site-footer-font-size, var(--font-size--2));
+    text-align: center;
+    line-height: var(--site-footer-line-height, var(--leading-loose));
+    color: var(--site-footer-color, oklch(var(--lch-slate-700)));
+}

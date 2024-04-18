@@ -13,7 +13,7 @@ body {
     color: var(--body-color);
 }
 
-.site-main {
+.site-content {
     margin-block: var(--site-main-space, var(--space-m));
 }
 

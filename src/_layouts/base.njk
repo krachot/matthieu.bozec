@@ -39,6 +39,9 @@
   <body class="page-{{ (page.url)|slugify or 'index' }}">
     {% svgsprite %}
     {% include '_header.njk' %}
-    {{content | safe}}
+    <div class="site-content">
+      {{content | safe}}
+    </div>  
+    {% include '_footer.njk' %}
   </body>
 </html>
