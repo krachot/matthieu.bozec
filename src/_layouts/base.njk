@@ -15,21 +15,26 @@
     <link rel="pingback" href="https://webmention.io/matthieu.bozec.org/xmlrpc">
     <link rel="me" href="https://piaille.fr/@krachot" />
     <meta name="theme-color" content="#FFB23E">
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebSite",
-              "@id": "{{ metadata.url }}#website",
-              "url": "{{ metadata.url }}",
-              "name": "{{ metadata.title }}",
-              "description": "{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}",
-              "inLanguage": "{{ metadata.language }}"
-            }
-          ]
-        }
-      </script>
+    {% ogImage "src/meta/og-image.og.njk", { title: ogTitle | safe, subTitle: metadata.title | safe } %}
+    <meta property="og:title" content="{{ title }}">
+		<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}">
+    <meta property="og:type" content="article">
+		<meta property="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "{{ metadata.url }}#website",
+            "url": "{{ metadata.url }}",
+            "name": "{{ metadata.title }}",
+            "description": "{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}",
+            "inLanguage": "{{ metadata.language }}"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="page-{{ (page.url)|slugify or 'index' }}">
     {% svgsprite %}

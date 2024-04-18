@@ -1,8 +1,9 @@
 require('dotenv').config();
 
+const fs = require('fs');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const svgSprite = require("eleventy-plugin-svg-sprite");
-
+const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 const filters = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
@@ -25,6 +26,21 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addTemplateFormats('css');
     eleventyConfig.addPlugin(require('./config/extensions/css.js'));
+
+    eleventyConfig.addPlugin(EleventyPluginOgImage, {
+        satoriOptions: {
+            width: 920,
+            height: 480,
+            fonts: [
+                {
+                    name: 'Ubuntu',
+                    data: fs.readFileSync('src/assets/fonts/Ubuntu-Medium.ttf'),
+                    weight: 700,
+                    style: 'normal',
+                },
+            ],
+		},
+    });
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
