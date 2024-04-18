@@ -1,5 +1,5 @@
 .vcard {
-    margin-block: clamp(1.5rem, 0.4565rem + 5.2174vi, 4.5rem);
+    margin-block: var(--space-xs);
     display: grid;
     grid-template-columns: 1fr minmax(6rem, 23%);
     align-items: center;
