@@ -18,7 +18,7 @@
     {% ogImage "src/meta/og-image.og.njk", { title: ogTitle | safe, subTitle: metadata.title | safe } %}
     <meta property="og:title" content="{{ title }}">
 		<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="{%if ogType %}{{ ogType }}{% else %}article{% endif %}">
 		<meta property="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
     <script type="application/ld+json">
       {
