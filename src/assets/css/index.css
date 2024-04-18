@@ -21,6 +21,7 @@
 @import "components/icon-list.css" layer(components);
 @import "components/image-grid.css" layer(components);
 @import "components/pagination.css" layer(components);
+@import "components/timeline.css" layer(components);
 
 @import "utilities/a11y.css" layer(utilities);
 @import "utilities/aspect-ratio.css" layer(utilities);

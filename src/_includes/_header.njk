@@ -8,21 +8,13 @@
 
     <nav class="main-menu" aria-label="Menu">
         <ul role="list">
+            {% for item in navigation.main %}
             <li>
-                <a href="/">
-                    Accueil
+                <a href="{{ item.url }}">
+                    {{ item.label }}
                 </a>
             </li>
-            <li>
-                <a href="/uses">
-                    /uses
-                </a>
-            </li>
-            <li>
-                <a href="/bookmarks/">
-                    Liens
-                </a>
-            </li>
+            {% endfor %}
         </ul>
     </nav>
 </header>

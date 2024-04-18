@@ -1,9 +1,92 @@
 ---
-permalink: '/about-me/'
+permalink: '/about/'
 layout: 'default'
 title: 'A propos'
-eleventyExcludeFromCollections: true
-draft: true
 ---
 
-<h1 class="title-3">A propos de moi</h1>
+<h1 class="lead">Salut, je suis Matthieu</h1>
+
+<p>
+    Je suis développeur d'applications et de sites web, basé à Nouaillé Maupertuis à côté de Poitiers. J'aime passer mon temps avec ma famille, je suis <b>Lego</b> addict, apprenti <b title="à 40 ans, on est toujours jeune">skateboarder</b>, <b title="Métal, Rock principalement">guitariste</b> et j'adore les soirées jeux de société.
+</p>
+
+<p>
+    Je suis actuellement le responsable technique et le co-fondateur de la société <a href="https://4h04.io">4h04</a>.
+</p>
+
+<p>
+    Je me définis comme un artisan du web, et j'aime pouvoir accompagner mes clients de la genèse jusqu'à la livraison du produit final aux utilisateurs.
+</p>
+
+<p>
+    Mes outils de travail au quotidien sont <b>Symfony</b>, <b>Wordpress</b> et <b>React</b>.
+</p>
+
+<h2>Bref historique <small>antéchronologique</small></h2>
+
+{% macro timeline(date, title, text = null) %}
+<div class="timeline-item">
+    <div class="timeline-item__time">{{ date }}</div>
+    <div class="timeline-item__content">
+        <h3 class="timeline-item__title">
+            {{ title }}
+        </h3>
+        {% if text %}
+        <p class="timeline-item__text">
+            {{ text | safe }}
+        </p>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
+
+{% set rectorat_desc %}
+    Développement d'applications en PHP.<br />Refonte du système de saisie des voeux post-bac.
+{% endset %}
+
+{% set 2s3i_desc %}
+    Intégrateur HTML / CSS dans un premier temps. Avec une spécialisation dans l'accessibilité.<br />
+    Puis ensuite développeur PHP avec l'arrivée de symfony en version 1.0.<br />
+    Projets notables : Site ecommerce Aigle, Site ecommerce bébé9, ...
+{% endset %}
+
+{% set ines_desc %}
+    Lead développeur. Référent technique en relation avec les clients. Analyse et développement d'applications métier, de sites web et ecommerce.<br />
+    Quelques références : Jofrati, Conseil régional des Notaires, sites groupe COFAQ, Price minister, Pierreval, ...
+{% endset %}
+
+{% set 4h04_desc %}
+    Co-fondateur de 4h04. Responsable technique et développeur au sein de la team. Réalisation d'applications métier, de sites web. Audit et consulting.<br />
+    Clients : MAIF, Caisse des dépôts, Conseil supérieur du Notariat, CrisBoat, Moteurs Babin, Eaux de Vienne, Advensis, ...
+{% endset %}
+
+<div class="timeline">
+    {{ timeline('Depuis 2016', '4h04 - Responsable technique', 4h04_desc) }}
+    {{ timeline('2010 - 2016', 'Ines Interactive - Lead développeur Web', ines_desc) }}
+    {{ timeline('2006 - 2010', '2S3i - Intégrateur / Développeur Web', 2s3i_desc) }}
+    {{ timeline('2004 - 2006', 'Développeur au Rectorat de Poitiers', rectorat_desc) }}
+    {{ timeline('2003', 'BTS Informatique de gestion en poche') }}
+    {{ timeline('2000', 'Apprentissage du HTML') }}
+    {{ timeline('1993', 'Découverte du GFA BASIC', 'Premier développement sous Atari ST') }}
+    {{ timeline('1981', 'Naissance') }}
+</div>
+
+<h2>Skills <small>liste non exhaustive</small></h2>
+
+<ul class="text--1">
+    <li>PHP</li>
+    <li>Symfony</li>
+    <li>Wordpress</li>
+    <li>React</li>
+    <li>HTML</li>
+    <li>Vanilla JS</li>
+    <li>React Native</li>
+    <li>PostgreSQL</li>
+    <li>MySQL</li>
+    <li>Api REST</li>
+    <li>SEO</li>
+</ul>
+
+<p>
+    Interessé pour travailler avec moi ? <a href="mailto:contact@4h04.com">Contactez-moi</a>
+</p>
