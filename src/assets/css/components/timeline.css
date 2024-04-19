@@ -40,7 +40,7 @@
             content: "";
             position: absolute;
             z-index: 1;
-            inset: calc(var(--inset-top) + .5rem) var(--inset-end) auto auto;
+            inset: calc(var(--inset-top) + .45rem) var(--inset-end) auto auto;
             width: 8px;
             height: 8px;
             border-radius: 50%;
@@ -67,6 +67,7 @@
     .timeline-item__title {
         font-size: var(--font-size-0);
         font-weight: 500;
+        padding-block-end: var(--space-3xs);
     }
 
     .timeline-item__text {
@@ -97,7 +98,7 @@
         }
 
         .timeline-item__time::before {
-            inset: calc(var(--inset-top) + .5rem) auto 0 var(--inset-end);
+            inset: calc(var(--inset-top) + .25rem) auto 0 var(--inset-end);
         }
 
         :is(.timeline-item__time, .timeline-item__content)::after {
