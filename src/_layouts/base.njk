@@ -43,6 +43,8 @@
       {{content | safe}}
     </div>  
     {% include '_footer.njk' %}
-     <script src="https://tinylytics.app/embed/1joFoX_Pp2-r9KHygu78.js" defer></script> 
+    {% if metadata.production %}
+    <script src="https://tinylytics.app/embed/1joFoX_Pp2-r9KHygu78.js" defer></script>
+    {% endif %} 
   </body>
 </html>

@@ -8,5 +8,6 @@ module.exports = {
       "name": "Matthieu Bozec",
       "email": "matthieu@4h04.com",
       "url": "https://matthieu.bozec.org/about"
-    }
+    },
+    "production": (process.env.CONTEXT === "production")
 }
