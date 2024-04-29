@@ -30,7 +30,7 @@ ogType: 'website'
         <ul class="icon-list" role="list" aria-label="Moi, ailleurs sur l'Internet">
             {% for item in social %}
             <li class="icon-list-item">
-                <a href="{{ item.url }}" aria-label="{{ item.name }}">{% icon item.icon %}</a>
+                <a href="{{ item.url }}" aria-label="{{ item.label }}">{% icon item.icon %}</a>
             </li>
             {% endfor %}
         </ul>
