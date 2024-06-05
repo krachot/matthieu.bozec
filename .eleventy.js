@@ -11,6 +11,7 @@ import icon from './config/shortcodes/icon.js';
 import image from './config/shortcodes/image.js';
 import cssTransform from './config/extensions/css.js';
 import htmlmin from './config/transforms/htmlmin.js';
+import viteShortcodes from './config/shortcodes/vite.js'
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
@@ -21,7 +22,6 @@ export default function (eleventyConfig) {
 
     // Pass-through files
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
-    eleventyConfig.addPassthroughCopy("./src/assets/js");
     eleventyConfig.addPassthroughCopy({ "./src/assets/favicon": "/" });
 
     // Plugins
@@ -31,9 +31,6 @@ export default function (eleventyConfig) {
         globalClasses: 'icon-svg',
         defaultClasses: 'icon-default',
     });
-
-    eleventyConfig.addTemplateFormats('css');
-    eleventyConfig.addPlugin(cssTransform);
 
     eleventyConfig.addPlugin(EleventyPluginOgImage, {
         satoriOptions: {
@@ -59,6 +56,13 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(icon);
     eleventyConfig.addPlugin(image);
     eleventyConfig.addPlugin(currentDate);
+
+    Object.keys(viteShortcodes).forEach((shortcodeName) => {
+        eleventyConfig.addNunjucksAsyncShortcode(
+            shortcodeName,
+            viteShortcodes[shortcodeName]
+        )
+    })
 
     // Transforms
     eleventyConfig.addPlugin(htmlmin);

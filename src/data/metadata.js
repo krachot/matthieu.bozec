@@ -1,3 +1,5 @@
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
 export default {
     "title": "Matthieu Bozec",
     "url": (process.env.NODE_ENV === "production" ? process.env.URL : process.env.DEPLOY_PRIME_URL) ||
@@ -9,5 +11,5 @@ export default {
       "email": "matthieu@4h04.com",
       "url": "https://matthieu.bozec.org/about"
     },
-    "production": (process.env.NODE_ENV === "production")
+    "production": IS_PRODUCTION
 }
