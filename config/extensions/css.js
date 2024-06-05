@@ -1,8 +1,8 @@
-const postcss = require("postcss");
-const autoprefixer = require("autoprefixer");
-const cssnanoPlugin = require("cssnano");
+import postcss from 'postcss';
+import autoprefixer from 'autoprefixer';
+import cssnanoPlugin from 'cssnano';
 
-module.exports = eleventyConfig => {
+export default (eleventyConfig) => {
     eleventyConfig.addExtension('css', {
         outputFileExtension: 'css',
         compile: async (content, path) => {
@@ -18,4 +18,4 @@ module.exports = eleventyConfig => {
             }
         }
     });
-}
+};

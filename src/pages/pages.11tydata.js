@@ -1,4 +1,4 @@
-const isDevEnv = process.env.ELEVENTY_ENV === 'development';
+const isDevEnv = process.env.NODE_ENV !== 'production';
 
 function showDraft(data) {
 	const isDraft = 'draft' in data && data.draft !== false;
@@ -6,7 +6,7 @@ function showDraft(data) {
 	return isDevEnv || !isDraft;
 }
 
-module.exports = {
+export default {
     "tag": ["page"],
     eleventyComputed: {
         eleventyExcludeFromCollections: function(data) {

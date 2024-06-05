@@ -13,7 +13,7 @@
     --page-gutters: clamp(var(--space-m), 3vw, var(--space-xl));
     --page-max: 52rem;
 
-    --body-border-color: oklch(var(--lch-gold));
+    --body-border-color: oklch(var(--lch-yellow-vibrant));
     --body-background-color: oklch(var(--lch-white));
     --body-color: oklch(var(--lch-black));
     --link-color: oklch(var(--lch-blue));

@@ -1,7 +1,7 @@
-const { DateTime, Settings } = require("luxon");
+import { DateTime, Settings } from "luxon";
 Settings.defaultLocale = "fr";
 
-module.exports = {
+export default {
     dateToFormat: function (date, format) {
         return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
             String(format)

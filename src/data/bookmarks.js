@@ -1,10 +1,10 @@
-const EleventyFetch = require('@11ty/eleventy-fetch');
+import EleventyFetch from '@11ty/eleventy-fetch';
 
 const API_KEY = process.env.POCKET_CONSUMER_KEY;
 const API_URL = 'https://getpocket.com/v3/get';
 const API_ACCESS_TOKEN = process.env.POCKET_ACCESS_TOKEN;
 
-module.exports = async () => {
+export default async () => {
     try {
       const json = await EleventyFetch(`${API_URL}`, {
           duration: '1h',

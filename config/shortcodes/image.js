@@ -1,4 +1,4 @@
-const Image = require("@11ty/eleventy-img");
+import Image from '@11ty/eleventy-img';
 
 async function imageShortcode(
     src,
@@ -28,6 +28,6 @@ async function imageShortcode(
     });
 }
 
-module.exports = eleventyConfig => {
+export default eleventyConfig => {
     eleventyConfig.addAsyncShortcode("image", imageShortcode);
 }

@@ -1,7 +1,7 @@
-const htmlmin = require("html-minifier");
-const isProduction = process.env.ELEVENTY_ENV === 'production';
+import htmlmin from 'html-minifier';
+const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = eleventyConfig => {
+export default eleventyConfig => {
     eleventyConfig.addTransform("htmlmin", function(content) {
         if (
             isProduction &&

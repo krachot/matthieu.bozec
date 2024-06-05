@@ -1,12 +1,20 @@
-require('dotenv').config();
+import dotenv from 'dotenv'
+dotenv.config();
 
-const fs = require('fs');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const svgSprite = require("eleventy-plugin-svg-sprite");
-const EleventyPluginOgImage = require('eleventy-plugin-og-image');
-const filters = require('./config/filters/index.js');
+import fs from 'fs';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import svgSprite from 'eleventy-plugin-svg-sprite';
+import EleventyPluginOgImage from 'eleventy-plugin-og-image';
+import filters from './config/filters/index.js';
+import currentDate from './config/shortcodes/currentDate.js';
+import icon from './config/shortcodes/icon.js';
+import image from './config/shortcodes/image.js';
+import cssTransform from './config/extensions/css.js';
+import htmlmin from './config/transforms/htmlmin.js';
 
-module.exports = function (eleventyConfig) {
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
+export default function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addWatchTarget('./src/assets');
@@ -25,7 +33,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addTemplateFormats('css');
-    eleventyConfig.addPlugin(require('./config/extensions/css.js'));
+    eleventyConfig.addPlugin(cssTransform);
 
     eleventyConfig.addPlugin(EleventyPluginOgImage, {
         satoriOptions: {
@@ -48,12 +56,12 @@ module.exports = function (eleventyConfig) {
     })
 
     // Shortcodes
-    eleventyConfig.addPlugin(require('./config/shortcodes/icon.js'));
-    eleventyConfig.addPlugin(require('./config/shortcodes/image.js'));
-    eleventyConfig.addPlugin(require('./config/shortcodes/currentDate.js'));
+    eleventyConfig.addPlugin(icon);
+    eleventyConfig.addPlugin(image);
+    eleventyConfig.addPlugin(currentDate);
 
     // Transforms
-    eleventyConfig.addPlugin(require('./config/transforms/htmlmin.js'));
+    eleventyConfig.addPlugin(htmlmin);
 
     // Layout alias
     eleventyConfig.addLayoutAlias('base', 'base.njk');

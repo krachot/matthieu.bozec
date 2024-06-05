@@ -15,7 +15,7 @@
     <link rel="pingback" href="https://webmention.io/matthieu.bozec.org/xmlrpc">
     <link rel="me" href="https://piaille.fr/@krachot" />
     <meta name="theme-color" content="#FFB23E">
-    {% ogImage "src/meta/og-image.og.njk", { title: ogTitle | safe, subTitle: metadata.title | safe } %}
+    {% ogImage "meta/og-image.og.njk", { title: ogTitle | safe, subTitle: metadata.title | safe } %}
     <meta property="og:title" content="{{ title }}">
 		<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}">
     <meta property="og:type" content="{%if ogType %}{{ ogType }}{% else %}article{% endif %}">
@@ -41,10 +41,10 @@
     {% include '_header.njk' %}
     <div class="site-content">
       {{content | safe}}
-    </div>  
+    </div>
     {% include '_footer.njk' %}
     {% if metadata.production %}
     <script src="https://tinylytics.app/embed/1joFoX_Pp2-r9KHygu78.js" defer></script>
-    {% endif %} 
+    {% endif %}
   </body>
 </html>
