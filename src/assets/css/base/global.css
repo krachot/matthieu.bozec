@@ -48,9 +48,19 @@ body {
 
 :is(a[class=""], a:not([class]), a.link) {
     color: var(--link-color);
-    text-decoration-color: var(--link-color);
-    text-underline-offset: calc(28px / 6);
-    text-decoration-thickness: calc(28px / 12);
+    background-color: transparent;
+    background-image: linear-gradient(120deg, var(--link-color), var(--link-color));
+    background-position: 0 99%;
+    background-repeat: no-repeat;
+    background-size: 100% .1em;
+    box-shadow: none;
+    text-decoration: none;
+    transition: background-size .1s ease-in, color .1s ease-in;
+
+    &:hover {
+        background-size: 100% 100%;
+        color: oklch(var(--lch-white));
+    }
 }
 
 :is(mark) {

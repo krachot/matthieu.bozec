@@ -9,10 +9,6 @@
     margin-inline: auto;
     inline-size: min(var(--max, var(--page-max)), calc(100% - calc(var(--space-m) * 2)));
 
-    & a:hover {
-        color: var(--site-header-link-hover-color, var(--link-color));
-    }
-
     & > * {
         padding-block: var(--space-3xs);
     }
@@ -30,6 +26,10 @@
         flex-flow: row nowrap;
         align-items: center;
         gap: .5rem;
+
+        &:hover {
+            color: var(--site-header-link-hover-color, var(--link-color));
+        }
     }
 
     & svg {
@@ -41,7 +41,7 @@
 .main-menu {
     font-size: var(--main-menu-font-size, var(--font-size--1));
     font-weight: 400;
-    
+
 
     & ul {
         display: flex;
@@ -51,9 +51,8 @@
     }
 
     & a {
-        color: currentColor;
-        text-decoration: none;
         display: block;
+        font-weight: 700;
     }
 
     & svg {
