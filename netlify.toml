@@ -39,12 +39,24 @@ for = "/.well-known/webfinger"
 ###
 [[redirects]]
   from = "https://mellifluous-flan-ceda8f.netlify.app"
-  to = "https://matthieu.bozec.org"
+  to = "https://www.matthieubozec.fr"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.bozec.org"
-  to = "https://matthieu.bozec.org"
+  to = "https://www.matthieubozec.fr"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://matthieu.bozec.org"
+  to = "https://www.matthieubozec.fr"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://matthieubozec.fr"
+  to = "https://www.matthieubozec.fr"
   status = 301
   force = true
