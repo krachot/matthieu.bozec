@@ -56,6 +56,12 @@ for = "/.well-known/webfinger"
   force = true
 
 [[redirects]]
+  from = "https://matthieu.bozec.org/*"
+  to = "https://www.matthieubozec.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://matthieubozec.fr"
   to = "https://www.matthieubozec.fr"
   status = 301
